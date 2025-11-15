@@ -2,8 +2,8 @@
 The directive of the preprocessor are introduced by the '#' character. The C compiler before compiling the C code,
 calls the preprocessor which pre-processes the source code. In this case the 'include' directive allows to put the content of a
 file in place of the directive itself.
-'stidio.h' is the filename of a header file. Typically in a header files are contained the prototypes of function which will be called
-during the execution.
+'stidio.h' is the filename of a header file. Typically in a header files are contained the prototypes of function which will be
+called during the execution.
 Without including it we cannot call the printf function in the main function, because the compiler does not know what arguments a function wants and what value is returned by it.
 
 The 'printf' function is a standard C library function. However it is not part of the language itself, for this reason we cannot call it implicitely, i.e., without specifying the prototype.
@@ -16,8 +16,8 @@ NB keywords like int, void, for, while, if and so on are part of the C language.
 #include <stdio.h>
 
 int main(void) { // This function returns a value of type int and it does not accept any arguments since there is the void keyword.
-	printf("Hello World\n"); //printf stands for print format. It prints on the standard output (the terminal), the string formatted like that. \n is the newline character.
-	return 0; //By convention the main returns 0 when the execution completed successfully.
+	printf("Hello World\n"); //printf stands for print formatted. It prints on the standard output (the terminal), the string formatted like that. \n is the newline character.
+	return 0; //By convention the main returns 0 when the execution completed successfully. By convention the linux shell associates to 0 the 'TRUE' boolean value.
 }
 
 /*
