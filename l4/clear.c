@@ -5,7 +5,7 @@
 #include <stdint.h> // We can access "advanced" int types. I think it is a wrapping of the primitive int types.
 
 void clear(void) {
-	printf("\033[H\033[2J\033[3J"); // We should have flushed the buffer in which printf accumulates chars to eventually write in the stdout. Typically when it encounters \n immediately flush all the content. This saves time because I/O ops are slow. In the printf there is the equivalent ASCII chars of hex control (escape) sequence: "1b 5b 48 1b 5b 32 4a 1b  5b 33 4a"
+	printf("\x1B[H\x1B[2J\x1B[3J"); // We should have flushed the buffer in which printf accumulates chars to eventually write in the stdout. Typically when it encounters \n immediately flush all the content. This saves time because I/O ops are slow. In the printf there is the equivalent ASCII chars of hex control (escape) sequence: "1b 5b 48 1b 5b 32 4a 1b  5b 33 4a". Please note that each escape sequence is introduced by the char 'ESC' which on the ASCII table is coded as 0x1B (033 in octal).
 }
 
 int main(void) {
